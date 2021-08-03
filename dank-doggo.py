@@ -88,7 +88,7 @@ while True:
                 title = html.escape(submission.title or '')
                 user = html.escape(submission.author.name or '')
 
-                template = "[title](link)"
+                template = "[{title}]({link})"
                 message = template.format(title=title, link=link)
 
                 log.info("Posting {}".format(link))
