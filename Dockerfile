@@ -19,8 +19,8 @@ RUN apt update && apt upgrade -y && \
 
 
 #SETUP for Railway
-RUN git clone https://github.com/Theheirofzeus/dank-doggo /root/okok
-WORKDIR /root/okok
+RUN git clone https://github.com/Theheirofzeus/dank-doggo /root/nok
+WORKDIR /root/nok
 
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
