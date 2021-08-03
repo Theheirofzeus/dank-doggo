@@ -14,13 +14,19 @@ RUN apt update && apt upgrade -y && \
     python3 \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp
 
+
+
+RUN git clone https://github.com/Theheirofzeus/dank-doggo /root
+WORKDIR /root
+
+
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
 ENV PATH="/home/bot/bin:$PATH"
 
 # Install requirements
-RUN pip3 install -r https://github.com/Theheirofzeus/dank-doggo/blob/master/requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Starting Worker
 CMD ["python3","dank-doggo.py"]
