@@ -1,4 +1,4 @@
-# We're using Debian Slim Buster image
+
 FROM python:3.9.5-slim-buster
 
 ENV PIP_NO_CACHE_DIR 1
@@ -20,8 +20,7 @@ RUN pip3 install --upgrade pip setuptools
 ENV PATH="/home/bot/bin:$PATH"
 
 # Install requirements
-RUN cd /root
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r https://github.com/Theheirofzeus/dank-doggo/blob/master/requirements.txt
 
 # Starting Worker
 CMD ["python3","dank-doggo.py"]
