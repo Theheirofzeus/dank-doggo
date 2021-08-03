@@ -85,14 +85,14 @@ while True:
                         post = True
                     continue
                 image = html.escape(submission.url or '')
-                title = html.escape(submission.title or '')
-                user = html.escape(submission.author.name or '')
+                title = html.escape(submission.title or ''
+# user = html.escape(submission.author.name or '')
 
                 template = "{title}"
-                message = template.format(title=title)
+                message = "{title}"
 
                 log.info("Posting {}".format(link))
-                bot.sendPhoto(chat_id=channel,caption=title)
+                bot.sendPhoto(chat_id=channel,caption=message)
                 # bot.sendMessage(chat_id=channel, parse_mode=telegram.ParseMode.HTML, text=message)
                 write_submissions(submission.id)
                 sleep(300)
