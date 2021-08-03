@@ -38,6 +38,7 @@ channel = credentials["channel"]
 sub = "AnimeMemes"
 start_time = datetime.utcnow().timestamp()
 
+
 def prev_submissions():
     try:
         with open('prev_submissions.id', 'r') as f:
@@ -88,7 +89,7 @@ while True:
                 user = html.escape(submission.author.name or '')
 
                 template = "{title}\n{link}\nby {user}"
-                message = template.format(title=title, link=link, user=user)
+                message = template.format(title=title)
 
                 log.info("Posting {}".format(link))
                 bot.sendPhoto(chat_id=channel, photo=submission.url, caption=message)
