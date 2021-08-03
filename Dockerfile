@@ -20,7 +20,6 @@ RUN apt update && apt upgrade -y && \
 RUN git clone https://github.com/Theheirofzeus/dank-doggo /root/ok
 WORKDIR /root/ok
 
-
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
