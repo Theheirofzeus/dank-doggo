@@ -6,6 +6,7 @@ ENV PIP_NO_CACHE_DIR 1
 
 RUN apt update && apt upgrade -y && \
     apt install --no-install-recommends -y \
+    git \
     python3-pip \
     python3-requests \
     python3-sqlalchemy \
