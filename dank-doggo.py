@@ -89,7 +89,7 @@ while True:
                 user = html.escape(submission.author.name or '')
 
                 template = "{title}\n{link}\nby {user}"
-                message = template.format(title=title)
+                message = template.format(title=title, link=link, user=user)
 
                 log.info("Posting {}".format(link))
                 bot.sendPhoto(chat_id=channel, photo=submission.url, caption=message)
