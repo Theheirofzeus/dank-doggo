@@ -11,7 +11,6 @@ RUN apt update && apt upgrade -y && \
     python3-requests \
     python3-sqlalchemy \
     python3-tz \
-    python3-aiohttp \
     python3 \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp
 
