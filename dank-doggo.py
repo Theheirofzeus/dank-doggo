@@ -88,11 +88,11 @@ while True:
                 title = html.escape(submission.title or '')
                 user = html.escape(submission.author.name or '')
 
-                template = "[{title}]({link})"
-                message = template.format(title=title, link=link)
+                template = "{title}"
+                message = template.format(title=title)
 
                 log.info("Posting {}".format(link))
-                bot.sendPhoto(chat_id=channel, photo=submission.url, caption=message, parse_mode='Markdown')
+                bot.sendPhoto(chat_id=channel,caption=message)
                 # bot.sendMessage(chat_id=channel, parse_mode=telegram.ParseMode.HTML, text=message)
                 write_submissions(submission.id)
                 sleep(300)
