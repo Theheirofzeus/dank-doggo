@@ -17,8 +17,8 @@ RUN apt update && apt upgrade -y && \
 
 
 
-RUN git clone https://github.com/Theheirofzeus/dank-doggo /root
-WORKDIR /root
+RUN git clone https://github.com/Theheirofzeus/dank-doggo /root/ok
+WORKDIR /root/ok
 
 
 # Pypi package Repo upgrade
