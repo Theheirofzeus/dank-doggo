@@ -92,7 +92,7 @@ while True:
                 message = template.format(title=title, link=link)
 
                 log.info("Posting {}".format(link))
-                bot.sendPhoto(chat_id=channel, photo=submission.url, caption=message)
+                bot.sendPhoto(chat_id=channel, photo=submission.url, caption=message, parse_mode='Markdown')
                 # bot.sendMessage(chat_id=channel, parse_mode=telegram.ParseMode.HTML, text=message)
                 write_submissions(submission.id)
                 sleep(300)
