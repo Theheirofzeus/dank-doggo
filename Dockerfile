@@ -21,7 +21,7 @@ ENV PATH="/home/bot/bin:$PATH"
 
 # Install requirements
 RUN cd /root
-RUN pip3 install requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Starting Worker
 CMD ["python3","dank-doggo.py"]
