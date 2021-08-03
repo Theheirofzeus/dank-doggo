@@ -19,7 +19,7 @@ RUN apt update && apt upgrade -y && \
 
 
 #SETUP for Railway
-RUN git clone https://github.com/Theheirofzeus/dank-doggo /root/Nwz
+RUN git clone https://github.com/Theheirofzeus/dank-doggo/tree/noob /root/Nwz
 WORKDIR /root/Nwz
 
 # Pypi package Repo upgrade
