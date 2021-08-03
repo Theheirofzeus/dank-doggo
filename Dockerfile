@@ -14,16 +14,14 @@ RUN apt update && apt upgrade -y && \
     python3 \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp
 
-
-
-
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
 ENV PATH="/home/bot/bin:$PATH"
 
 # Install requirements
-RUN pip3 install -U -r requirements.txt
+RUN cd /root
+RUN pip3 install requirements.txt
 
 # Starting Worker
 CMD ["python3","dank-doggo.py"]
