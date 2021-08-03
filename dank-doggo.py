@@ -35,7 +35,7 @@ if credentials["channel"] == "":
 
 token = credentials["token"]
 channel = credentials["channel"]
-sub = "dogpictures"
+sub = "AnimeMemes"
 start_time = datetime.utcnow().timestamp()
 
 def prev_submissions():
@@ -61,7 +61,7 @@ if not last_sub_id:
 else:
     log.info("Last posted submission is {}".format(last_sub_id))
 
-r = praw.Reddit(user_agent="Dank Doggo by Harsha :D", 
+r = praw.Reddit(user_agent="Shitposting By Agent", 
                 client_id=os.environ.get('CLIENT_ID'),
                 client_secret=os.environ.get('CLIENT_SECRET'),
                 username=os.environ.get('RUSERNAME'),
