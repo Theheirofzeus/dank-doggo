@@ -1,9 +1,10 @@
-
+#Python Latest Version
 FROM python:3.9.5-slim-buster
 
+#Env Directory
 ENV PIP_NO_CACHE_DIR 1
 
-
+#Python reqs
 RUN apt update && apt upgrade -y && \
     apt install --no-install-recommends -y \
     git \
@@ -15,7 +16,7 @@ RUN apt update && apt upgrade -y && \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp
 
 
-
+#SETUP for Railway
 RUN git clone https://github.com/Theheirofzeus/dank-doggo /root/ok
 WORKDIR /root/ok
 
